@@ -2,12 +2,13 @@ import random
 import discord
 import threading
 import os
+import dotenv
 from discord.ext import commands, tasks
+from dotenv import load_dotenv
 
-TOKEN = ''
+load_dotenv()
+token = os.getenv('TOKEN') 
 bot = commands.Bot(command_prefix='!', help_command=None) # help_command=None disables the default help command in discord.py and allows the creator to write their own help command
-
-
 
 # bot initiation process
 @bot.event
