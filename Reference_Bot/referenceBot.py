@@ -7,7 +7,7 @@ my_cse_id = '6d091e6cdf9452610'
 
 bot = commands.Bot(command_prefix='.', help_command=None)
 
-TOKEN = 'Nzc4ODAzNDQ4NDI1NzQyMzM3.X7XTOw.TQ8v56IeEMeA866KXp8GGiC_Ps8'
+TOKEN = ''
 
 @bot.event
 async def on_ready():

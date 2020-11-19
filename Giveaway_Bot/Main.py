@@ -3,7 +3,7 @@ from discord.ext import commands, tasks
 
 bot = commands.Bot(command_prefix=',', help_command=None)
 
-TOKEN = 'Nzc4ODA1NDQ2NTQ2MTYxNjc1.X7XVFw.iU4jO5A5k94mQl9G4cbgbuqvBuI'
+TOKEN = ''
 
 @bot.event
 async def on_ready():
