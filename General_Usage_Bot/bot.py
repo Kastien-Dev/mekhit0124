@@ -20,5 +20,4 @@ class Startup:
         await channel.send("bot is online")
 
 
-
 bot.run(TOKEN)
