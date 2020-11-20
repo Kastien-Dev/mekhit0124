@@ -11,7 +11,7 @@ from discord.ext import commands, tasks
 with open('./config3.json', 'r') as f:
     TOKEN = json.load(f)['TOKEN']
 
-bot = commands.Bot(command_prefix='!', help_command=None, shutdown_command=None)
+bot = commands.Bot(command_prefix='/', help_command=None, shutdown_command=None)
       
 class Startup: #finished     
     @bot.event

@@ -12,7 +12,7 @@ from discord.ext import commands, tasks
 with open('./config.json', 'r') as f:
     TOKEN = json.load(f)['TOKEN']
 
-bot = commands.Bot(command_prefix='!', help_command=None, shutdown_command=None, update_command=None, restart_command=None)
+bot = commands.Bot(command_prefix=';', help_command=None, shutdown_command=None, update_command=None, restart_command=None)
 
 class Startup: #finished     
     @bot.event
@@ -55,12 +55,8 @@ class Miscellaneous: # updatable
     @bot.command()
     async def help(ctx): 
         halp = discord.Embed(title="Commands Anyone Can use are:", color=0x323e54)
-        halp.add_field(name="!help", value="Prints he _help_ window")
-        halp.add_field(name="!csharp", value="This Command Is Currently Under Construction!")
-        halp.add_field(name="!html", value="This Command Is Currently Under Construction!")
-        halp.add_field(name="!java", value="This Command Is Currently Under Construction!")
-        halp.add_field(name="!javascript", value="This Command Is Currently Under Construction!")
-        halp.add_field(name="!python", value="This Command Is Currently Under Construction!")
+        halp.add_field(name="!help", value="Prints the _help_ window")
+        halp.add_field(name="Apologies", value="There are no common commands for members to use at this time.")
         halp.add_field(name="Disclaimer!", value=f"""***This can/will be changed at any given
         time. If you're ever unsure of what commands are available to you for {bot.user.name}
         then please refer back to the #available_commands channel for updated commands :)""")
@@ -126,20 +122,6 @@ class AdminCommands: # updateable
                         channel = await bot.fetch_channel(779323092542685205)
                         await channel.send(mem.name)
 
-    @bot.command()
-    @commands.is_owner()
-    async def update(ctx):
-        channel = await bot.fetch_channel(779323092542685205)
-        await channel.send("This Command Is Still Under Construction!")
-        # await channel.send(f"{ctx.author} has killed {bot.user.name}")
-        # try:
-        #     bot.clear()
-        # except:
-        #     pass
-        # finally:
-        #     channel = await bot.fetch_channel(779323092542685205)
-        #     await channel.send(f"{ctx.author} has brought {bot.user.name} back to life!")
-        #     os.system("/home/shellbyy/Desktop/mekhit0124/Coding_Challenges_Bot/ python3 main.py /c")
 
 
 bot.run(TOKEN)
