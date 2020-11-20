@@ -21,13 +21,13 @@ class Startup: #finished
         await channel.send("I'm online! Thank you for waking me up! :smile:")
     @bot.event
     async def on_join():
-    channel = await bot.fetch_channel(779323092542685205)
-    await channel.send(f"{user.name} has joined {bot.user.name}!")
+        channel = await bot.fetch_channel(779323092542685205)
+        await channel.send(f"{user.name} has joined {bot.user.name}!")
 
     @bot.event
     async def on_leave():
-    channel = await bot.fetch_channel(779323092542685205)
-    await channel.send(f"{user.name} has left {bot.user.name}!")
+        channel = await bot.fetch_channel(779323092542685205)
+        await channel.send(f"{user.name} has left {bot.user.name}!")
 
 class Miscellaneous: # updatable
     @bot.command()
