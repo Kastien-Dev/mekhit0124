@@ -8,16 +8,16 @@ import json
 
 from discord.ext import commands, tasks
 
-with open('./config.json', 'r') as f:
+with open('./config2.json', 'r') as f:
     TOKEN = json.load(f)['TOKEN']
 
 bot = commands.Bot(command_prefix='!', help_command=None, shutdown_command=None)
 
-class Startup:        
+class Startup: #finished     
     @bot.event
-    async def on_ready(): 
-        channel = bot.get_channel(774970601013379092)
-        await channel.send("bot is online")
+    async def on_ready():
+        channel = await bot.fetch_channel(779323092542685205)
+        await channel.send("I'm online! Thank you for waking me up! :smile:")
 
 
 bot.run(TOKEN)
